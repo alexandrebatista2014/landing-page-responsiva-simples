@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Simples</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo">Menu logo</div>
+        <ul>
+            <li><a href="#home" class="active" onclick="toggle()">Home</a></li>
+            <li><a href="#sobre" onclick="toggle()">Quem somos</a></li>
+            <li><a href="#produtos" onclick="toggle()">Produtos</a></li>
+            <li><a href="#contato" onclick="toggle()">contato</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <section id="home">
+        <h1>Landing page responsiva simples</h1>
+    </section>
+
+    <main>
+        <section id="sobre">
+            <div class="content">
+                <div>
+                    <h2>Aqui é inserido um título, aqui pode ser inserido um título</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum est reprehenderit. Ipsum
+                        provident omnis beatae vel eveniet similique, dolore magnam aspernatur reiciendis nemo, culpa
+                        officia veritatis alias porro illo.</p>
+                    <a href="" class="btn">Saiba mais</a>
+                </div>
+            </div>
+            <img src="coqueiro.jpg" alt="Imagems">
+        </section>
+
+        <section id="produtos">
+            <div class="content">
+                <div>
+                    <h2>Aqui é inserido um título, aqui pode ser inserido um título</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum est reprehenderit. Ipsum
+                        provident omnis beatae vel eveniet similique, dolore magnam aspernatur reiciendis nemo, culpa
+                        officia veritatis alias porro illo.</p><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, laudantium libero? Ipsam
+                        consequuntur odit suscipit, laboriosam vero distinctio sequi dolorum tenetur accusamus placeat
+                        nulla, est dolorem hic culpa nesciunt fuga?</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="content">
+                <div>
+                    <h2>Aqui é inserido um título, aqui pode ser inserido um título</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum est reprehenderit. Ipsum
+                        provident omnis beatae vel eveniet similique, dolore magnam aspernatur reiciendis nemo, culpa
+                        officia veritatis alias porro illo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        
+        function toggle(){
+            var header = document.getElementById("header")
+            header.classList.toggle('active')
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto',Arial, Helvetica, sans-serif ;
+}
+header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(3,3,3, 0.9);
+    z-index: 1000;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    color: #ffffff;
+    z-index: 2;
+}
+header ul {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+}
+header ul li {
+    margin-left: 5px;
+}
+header ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    position: relative;
+    transition: 0.3s;
+    color: #ffffff;
+    display: inline-block;
+}
+header ul li a.active,
+header ul li a:hover {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+}
+.toggle {
+    display: none;
+}
+#home {
+    background: url(img.jpg)no-repeat center center;
+    font-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home h1 {
+    font-weight: bold;
+    font-size: 50px;
+    background: rgba(255,255,255, 0.7);
+    padding:10px;
+    border-radius: 10px;
+}
+main section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    min-height: 100vh;
+}
+main section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 100px;
+}
+main section img {
+    max-height: 500px;
+}
+main section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+main section p {
+    font-size: 20px;
+    line-height: 25px;
+}
+main section .content a {
+    color: #ffffff;
+    background: #000000;
+    text-decoration: none;
+    padding: 15px 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+main section:nth-child(even) {
+    background: #565656;
+    color: #ffffff;
+}
+
+
+@media (max-width:992px) {
+    header ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width:100%;
+        padding: 50px 100px;
+        height: calc(100vh - 80px);
+        background-color: rgba(3,3,3, 0.9);
+        overflow: auto;
+        transition: 0.3s;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    header ul li a {
+        margin:10px 0
+    }
+    .toggle {
+        display: block;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+    .toggle::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 3px;
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 10px 0 #ffffff;
+        transition: 0.5s;
+    }
+    .toggle::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: 3px;
+        background: #ffffff;
+        width: 100%;
+        transition: 0.5s;
+    }
+    header.active ul {
+        opacity: 1;
+        top: 80px;
+        transform: translateY(0);
+    }
+    header.active .toggle::before {
+        top: 14px;
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #ffffff;
+    }
+    header.active .toggle::after {
+        bottom: 14px;
+        transform: rotate(-45deg);
+    }
+    main section {
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 50px;
+    }
+    main section .content {
+        padding-right: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
